@@ -80,5 +80,5 @@ jobs:
         server: ${{ secrets.SERVER }}
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
-        server-dir: /var/www/clients/client103/web226/web/test
-        local-dir: ./frontend/dist
+        server-dir: /var/www/clients/client103/web226/web/test/
+        local-dir: ./frontend/dist/
