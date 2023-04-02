@@ -32,6 +32,9 @@ jobs:
       run: |
         cd frontend
         npm run build
+      env:
+        NODE_ENV: production
+        SERVER_PATH: ${{ vars.SERVER_PATH }}
 
   test:
     needs: build
@@ -88,3 +91,6 @@ jobs:
         server-dir: ./web/${{ vars.SERVER_PATH }}
         local-dir: ./frontend/dist/
         protocol: ftps
+      env:
+        NODE_ENV: production
+        SERVER_PATH: ${{ vars.SERVER_PATH }}

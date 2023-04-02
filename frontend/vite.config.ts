@@ -5,6 +5,7 @@ import path from 'path';
 
 let base = '/';
 if (process.env.NODE_ENV === 'production') {
+  console.log({ env: process.env });
   base += process.env.SERVER_PATH || '';
 }
 export default defineConfig({
