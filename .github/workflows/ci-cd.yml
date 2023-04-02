@@ -88,4 +88,3 @@ jobs:
         server-dir: ./web/test/
         local-dir: ./frontend/dist/
         protocol: ftps
-        log-level: verbose
