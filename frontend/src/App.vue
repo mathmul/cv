@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { withDefaults } from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
+import HelloWorld from '@/components/HelloWorld.vue';
 
 export interface Props {
   msg: string;
