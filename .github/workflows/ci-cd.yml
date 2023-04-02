@@ -83,4 +83,5 @@ jobs:
         server-dir: /var/www/clients/client103/web226/web/test/
         local-dir: ./frontend/dist/
         protocol: ftps
-        dangerous-clean-slate: true
+        dry-run: true
+        # dangerous-clean-slate: true
