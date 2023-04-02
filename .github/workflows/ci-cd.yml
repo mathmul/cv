@@ -77,10 +77,10 @@ jobs:
     - name: Deploy to hosting provider
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
-        server: ${{ secrets.SERVER }}
-        username: ${{ secrets.USERNAME }}
+        server: ${{ env.SERVER }}
+        username: ${{ env.USERNAME }}
         password: ${{ secrets.PASSWORD }}
-        server-dir: /var/www/clients/client103/web226/web/test/
+        server-dir: ${{ env.ROOT }}/test/
         local-dir: ./frontend/dist/
         protocol: ftps
         dry-run: true
