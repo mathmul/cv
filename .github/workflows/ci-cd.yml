@@ -1,9 +1,14 @@
 name: CI/CD Pipeline
 
+concurrency:
+  group: ci-cd-pipeline-production
+  cancel-in-progress: true
+
 on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   build:
@@ -83,3 +88,4 @@ jobs:
         server-dir: ${{ vars.ROOT }}/web/test/
         local-dir: ./frontend/dist/
         protocol: ftps
+        security: strict
