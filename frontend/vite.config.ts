@@ -3,7 +3,10 @@ import vue from '@vitejs/plugin-vue';
 import Checker from 'vite-plugin-checker';
 import path from 'path';
 
-// https://vitejs.dev/config/
+let base = '/';
+if (process.env.NODE_ENV === 'production') {
+  base += process.env.SERVER_PATH || '';
+}
 export default defineConfig({
   plugins: [
     vue(),
@@ -14,5 +17,5 @@ export default defineConfig({
       '@': path.resolve(__dirname, 'src'),
     },
   },
-  base: process.env.NODE_ENV === 'production' ? '/test/' : '/',
+  base,
 });

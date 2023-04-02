@@ -85,6 +85,6 @@ jobs:
         server: ${{ vars.SERVER }}
         username: ${{ vars.USERNAME }}
         password: ${{ secrets.PASSWORD }}
-        server-dir: ./web/cv/
+        server-dir: ./web/${{ vars.SERVER_PATH }}}
         local-dir: ./frontend/dist/
         protocol: ftps
