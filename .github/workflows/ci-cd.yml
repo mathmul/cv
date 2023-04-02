@@ -75,8 +75,7 @@ jobs:
         npm run build
 
     - name: Deploy to hosting provider
-      # uses: SamKirkland/FTP-Deploy-Action@4.3.4
-      uses: SamKirkland/FTP-Deploy-Action@ftp-deploy-fix
+      uses: SamKirkland/FTP-Deploy-Action@4.3.4
       with:
         server: ${{ secrets.SERVER }}
         username: ${{ secrets.USERNAME }}
@@ -84,3 +83,4 @@ jobs:
         server-dir: /var/www/clients/client103/web226/web/test/
         local-dir: ./frontend/dist/
         protocol: ftps
+        dangerous-clean-slate: true
