@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-console.log({ env: process.env });
+console.log({ env1: process.env });
+console.log({ env2: import.meta.env.VITE_SERVER_PATH });
 
 defineProps({
   msg: String,
