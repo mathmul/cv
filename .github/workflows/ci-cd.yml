@@ -83,5 +83,3 @@ jobs:
         server-dir: ${{ vars.ROOT }}/test/
         local-dir: ./frontend/dist/
         protocol: ftps
-        dry-run: true
-        # dangerous-clean-slate: true
