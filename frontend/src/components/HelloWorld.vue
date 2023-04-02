@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
+console.log({ env: process.env });
+
 defineProps({
   msg: String,
 })
